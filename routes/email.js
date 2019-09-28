@@ -54,8 +54,8 @@ router.post('/contact-form', function (req, res, next) {
                     "name": "VMSS60"
                 },
                 "reply_to": {
-                    "email": "masseymustangs2020@gmail.com",
-                    "name": "Jodi Greige"
+                    "email": process.env.DEST_EMAIL,
+                    "name": process.env.DEST_NAME
                 },
                 "template_id": "d-46025b41a73143dbaf82d797c8612b81"
             }, {
@@ -69,8 +69,8 @@ router.post('/contact-form', function (req, res, next) {
                     {
                         "to": [
                             {
-                                "email": 'xujames007@gmail.com',
-                                "name": 'James Xu'
+                                "email": process.env.DEST_EMAIL,
+                                "name": process.env.DEST_NAME
                             }
                         ],
                         "dynamic_template_data": {
@@ -86,8 +86,8 @@ router.post('/contact-form', function (req, res, next) {
                     "name": "VMSS60"
                 },
                 "reply_to": {
-                    "email": "xujames007@gmail.com",
-                    "name": "James Xu"
+                    "email": process.env.DEST_EMAIL,
+                    "name": process.env.DEST_NAME
                 },
                 "template_id": "d-81bbca1dc9274d0eb34eb47ec35e22d2"
             }, {
