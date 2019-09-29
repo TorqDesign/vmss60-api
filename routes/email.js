@@ -1,7 +1,6 @@
 const express = require('express');
 const axios = require('axios');
 const router = express.Router();
-const SG_API = process.env.SG_API;
 
 router.post('/mailing-list', function (req, res, next) {
     let content = req.body;
@@ -14,7 +13,7 @@ router.post('/mailing-list', function (req, res, next) {
         ]
     }, {
         headers: {
-            'authorization': 'Bearer ' + SG_API,
+            'authorization': 'Bearer ' + process.env.SG_API,
             'Content-Type': 'application/json'
         }
     }).then(data => {
@@ -60,7 +59,7 @@ router.post('/contact-form', function (req, res, next) {
                 "template_id": "d-46025b41a73143dbaf82d797c8612b81"
             }, {
                 headers: {
-                    'authorization': 'Bearer ' + SG_API,
+                    'authorization': 'Bearer ' + process.env.SG_API,
                     'Content-Type': 'application/json'
                 }
             }),
@@ -92,7 +91,7 @@ router.post('/contact-form', function (req, res, next) {
                 "template_id": "d-81bbca1dc9274d0eb34eb47ec35e22d2"
             }, {
                 headers: {
-                    'authorization': 'Bearer ' + SG_API,
+                    'authorization': 'Bearer ' + process.env.SG_API,
                     'Content-Type': 'application/json'
                 }
             })
